@@ -1,4 +1,4 @@
-#!/home/austin/vscodeProjects/gold-data/.venv/bin/python3
+#!/home/austin/PycharmProjects/gold-data/.venv/bin/python
 # -*- coding: utf-8 -*-
 import re
 import sys
