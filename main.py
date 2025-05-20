@@ -8,10 +8,15 @@ def run_etl():
 
     # extraction
     print("Starting data extraction...")
-    raw_data = fetch_xauusd_data()
 
-    if 'values' not in raw_data:
-        print("No data found, Check api configuration or usage!")
+    try:
+        raw_data = fetch_xauusd_data()
+
+        if 'values' not in raw_data:
+            print("No data found, Check api configuration or usage!")
+            return
+    except Exception as e:
+        print(f"Error while fetching data: {e}")
         return
 
     # transformation
